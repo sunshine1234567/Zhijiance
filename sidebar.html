@@ -1,0 +1,145 @@
+<!--侧边栏-->
+<div class="sidebar d-ib ta-c p-a o-h">
+    <h3 class="c-f">菜单</h3>
+    <div class="sidebar-box p-r fs-24 c-f">
+        <div class="module1 d-ib p-a timely" onclick="switchs(1)">
+            <p>实时一览</p>
+        </div>
+        <div class="module2 d-ib p-a police" onclick="switchs(2)">
+            <p>报警管理</p>
+        </div>
+        <div class="module3 d-ib p-a record" onclick="switchs(3)">
+            <p>数据查询</p>
+        </div>
+        <div class="module4 d-ib p-a curve" onclick="switchs(4)">
+            <p>曲线分析</p> 
+        </div>
+        <div class="module5 d-ib p-a situation" onclick="switchs(5)">
+            <p>情况管理</p>
+        </div>
+        <div class="module6 d-ib p-a todo" onclick="switchs(6)">
+            <p>待办任务</p>
+        </div>
+        <div class="module7 d-ib p-a history" onclick="switchs(7)">
+            <p>历史任务</p>
+        </div>
+        <div class="module8 d-ib p-a operation" onclick="switchs(8)">
+            <p>运维管理</p>
+        </div>
+        <div class="module9 d-ib p-a pollute" onclick="switchs(10)">
+            <p>污染源数据完整率</p>
+        </div>
+        <div class="module10 d-ib p-a colligate" onclick="switchs(10)">
+            <p>综合分析</p>
+        </div>
+        <div class="module11 d-ib p-a transfer" onclick="switchs(11)">
+            <p>数据传输有效率</p>
+        </div>
+        <div class="module12 d-ib p-a instrument" onclick="switchs(12)">
+            <p>在线仪器运转率</p>
+        </div>
+    </div>
+</div>
+
+<div class="recall d-ib p-f"></div>
+
+<script>
+    $(".sidebar-box div").click(function(){
+        $(".sidebar").css({"width":"0px"});
+        $("#content").css({"left":"0px"});
+    })
+
+
+    function switchs(nav) {
+        herder()
+        switch (nav) {
+            case 1:
+                $('#content-box').load('timely.html', function () {
+                    $(".title").text("实时一览");
+                });
+                break;
+            case 2:
+                $('#content-box').load('police.html', function () {
+                    $(".title").text("报警管理");
+                });
+                break;
+            case 3:
+                $('#content-box').load('record.html', function () {
+                    $(".title").text("数据查询");
+                });
+                break;
+            case 4:
+                $('#content-box').load('curve.html', function () {
+                    $(".title").text("曲线分析");
+                });
+                break;
+            case 5:
+                $('#content-box').load('situation.html', function () {
+                    $(".title").text("情况管理");
+                });
+                break;
+            case 6:
+                $('#content-box').load('todo.html', function () {
+                    $(".title").text("待办任务");
+                });
+                break;
+            case 7:
+                $('#content-box').load('history.html', function () {
+                    $(".title").text("历史任务");
+                });
+                break;
+            case 8:
+                $('#content-box').load('operation.html', function () {
+                    $(".title").text("运维管理");
+                });
+                break;
+            case 9:
+                $('#content-box').load('pollute.html', function () {
+                    $(".title").text("污染源数据完整率");
+                });
+                break;
+            case 10:
+                $('#content-box').load('colligate.html', function () {
+                    $(".title").text("综合分析");
+                });
+                break;
+            case 11:
+                $('#content-box').load('transfer.html', function () {
+                    $(".title").text("数据传输有效率");
+                });
+                break;
+            case 12:
+                $('#content-box').load('instrument.html', function () {
+                    $(".title").text("在线仪器运转率");
+                });
+                break;
+            case 13:
+                $('#content-box').load('install.html', function () {
+                    $(".title").text("设置");
+                });
+                break;
+            case 14:
+                $('#content-box').load('about.html', function () {
+                    $(".title").text("关于");
+                });
+                break;
+            case 15:
+                $('#content-box').load('password.html', function () {
+                    $(".title").text("修改密码");
+                });
+                break;
+            case 16:
+                $('#content-box').load('homepage.html', function () {
+                    $(".title").text("首页");
+                });
+                break;
+        }
+    }
+</script>
+
+
+
+
+
+
+

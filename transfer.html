@@ -1,0 +1,136 @@
+<!--综合分析-->
+<div class="colligate ta-c fs-30 c-f">
+    <div class="timely-search d-ib ta-l bg-f p-r">
+        <select class="js-select180 select-normal">
+            <option>一级区域</option>
+            <option>请选择</option>
+        </select>
+        <select class="js-select180 select-normal">
+            <option>二级区域</option>
+            <option>请选择</option>
+        </select>
+        <select class="js-select180 select-normal">
+            <option>企业</option>
+            <option>请选择</option>
+        </select>
+        <a href="javascript:;" class="more d-ib fs-26">更多</a>
+        <div class="more-box record-more d-n">
+            <div class="more-type">
+                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                     <span>排放口：</span>
+                </div>
+                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                     <li class="d-ib ta-c active">1#废气排放口</li>
+                     <li class="d-ib ta-c">2#废气排放口</li>
+                </ul>
+                <div class="c-b"></div>
+            </div>
+            <div class="more-type">
+                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                     <span>开始时间：</span>
+                </div>
+                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                    <input id="inpstart" name="time1" value="" placeholder="请选择" readonly="" type="text">
+                </ul>
+                <div class="c-b"></div>
+            </div>
+            <div class="more-type">
+                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                     <span>结束时间：</span>
+                </div>
+                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                    <input id="inpend" name="time2" value="" placeholder="请选择" readonly="" type="text">
+                </ul>
+                <div class="c-b"></div>
+            </div>
+            <div class="more-type more-type2">
+                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                     <li class="d-ib ta-c active">全部</li>
+                     <li class="d-ib ta-c">在线</li>
+                     <li class="d-ib ta-c">离线</li>
+                     <li class="d-ib ta-c">离线</li>
+                </ul>
+                <div class="c-b"></div>
+            </div>
+            <div class="more-type">
+                <a href="javascript:;" class="inquiry-a d-ib ta-c">查询</a>
+            </div>
+        </div>
+        <div class="search-shrink p-a d-n"></div>
+    </div>
+
+    <div class="colligate-box"> 
+        <ul class="ulf-l fs-24">
+            <li class="colligate-li1 d-ib">
+                <p>污染</br>数据完整率</p>
+            </li>
+            <li class="colligate-li2 d-ib active">
+                <p>数据</br>传输完整率</p>
+            </li>
+            <li class="colligate-li3 d-ib">
+                <p>在线</br>仪器运转率</p>
+            </li>
+            <li class="colligate-li4 d-ib">
+                <p>任务</br>完成率</p>
+            </li>
+            <div class="c-b"></div>
+        </ul>
+        <div class="colligate-box1">
+            <div class="circle-box d-ib f-l p-r">
+                <div class="container container1"></div>
+                <span class="d-ib p-a fs-20 bai">40%</span>
+            </div>
+            <div class="circle-box d-ib f-l p-r">
+                <div class="container container2"></div>
+                <span class="d-ib p-a fs-20 bai">40%</span>
+            </div>
+            <div class="circle-box d-ib f-l p-r">
+                <div class="container container3"></div>
+                <span class="d-ib p-a fs-20 bai">40%</span>
+            </div>
+            <div class="circle-box d-ib f-l p-r">
+                <div class="container container4"></div>
+                <span class="d-ib p-a fs-20 bai">40%</span>
+            </div>
+            <div class="circle-box d-ib f-l p-r">
+                <div class="container container5"></div>
+                <span class="d-ib p-a fs-20 bai">40%</span>
+            </div>
+            <div class="circle-box d-ib f-l p-r">
+                <div class="container container6"></div>
+                <span class="d-ib p-a fs-20 bai">40%</span>
+            </div>
+            <div class="circle-box d-ib f-l p-r">
+                <div class="container container7"></div>
+                <span class="d-ib p-a fs-20 bai">40%</span>
+            </div>
+            <div class="circle-box d-ib f-l p-r">
+                <div class="container container8"></div>
+                <span class="d-ib p-a fs-20 bai">40%</span>
+            </div>
+            <div class="c-b"></div>
+
+        </div>
+    </div>
+</div>
+
+<script src="js/select2_option.js"></script>
+<script>
+    $(".more").click(function(){
+        $(this).hide();
+        $(".more-box,.search-shrink").show();
+        $(".timely-search .select2-container").css("margin","0 0.25rem 0 0.18rem")
+    })
+    $(".search-shrink").click(function(){
+        $(".more-box,.search-shrink").hide();
+        $(".more").show();
+        $(".timely-search .select2-container").css("margin","0 0.06rem 0 0")
+    })
+
+</script>
+
+    
+
+
+
+

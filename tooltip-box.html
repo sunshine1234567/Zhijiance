@@ -1,0 +1,26 @@
+<!--提示弹窗-->
+<div class="mask p-f d-n"></div>
+<div class="tooltip-box bg-f p-f o-h ta-c d-n">
+    <h5 class="fs-14 c-f ta-c">提示</h5>
+    <p class="c-6">提交成功</p>
+    <div class="information-a">
+        <a href="javascript:;" class="d-ib confirm">确定</a>
+    </div>
+</div>
+
+<div class="tooltip-box2 bg-f p-f o-h ta-c d-n">
+    <h5 class="fs-14 c-f ta-c">提示</h5>
+    <p class="c-6">是否删除</p>
+    <div class="information-a">
+        <a href="javascript:;" class="d-ib cancel">否</a>
+        <a href="javascript:;" class="d-ib confirm">是</a>
+    </div>
+</div>
+
+<script>
+    $(".confirm,.cancel").click(function(){
+        $(".tooltip-box,.tooltip-box2").hide();
+    })
+</script>
+
+

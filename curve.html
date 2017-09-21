@@ -1,0 +1,213 @@
+<!--曲线分析-->
+<div class="timely ta-c fs-30 c-f">
+    <div class="timely-search d-ib ta-l bg-f p-r">
+        <select class="js-select180 select-normal">
+            <option>山西省</option>
+            <option>请选择</option>
+        </select>
+        <select class="js-select180 select-normal">
+            <option>太原市</option>
+            <option>请选择</option>
+        </select>
+        <select class="js-select180 select-normal">
+            <option>热媒电厂</option>
+            <option>请选择</option>
+        </select>
+        <a href="javascript:;" class="more d-ib fs-26">更多</a>
+        <div class="more-box record-more d-n">
+            <div class="more-type">
+                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                     <span>排放口：</span>
+                </div>
+                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                     <li class="d-ib ta-c active">1#废气排放口</li>
+                     <li class="d-ib ta-c">2#废气排放口</li>
+                </ul>
+                <div class="c-b"></div>
+            </div>
+            <div class="more-type">
+                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                     <span>开始时间：</span>
+                </div>
+                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                    <input id="inpstart" name="time1" value="" placeholder="请选择" readonly="" type="text">
+                </ul>
+                <div class="c-b"></div>
+            </div>
+            <div class="more-type">
+                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                     <span>结束时间：</span>
+                </div>
+                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                    <input id="inpend" name="time2" value="" placeholder="请选择" readonly="" type="text">
+                </ul>
+                <div class="c-b"></div>
+            </div>
+            <div class="more-type more-type3">
+                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                     <li class="d-ib ta-c active">昨天</li>
+                     <li class="d-ib ta-c">本周</li>
+                     <li class="d-ib ta-c">上周</li>
+                     <li class="d-ib ta-c">本月</li>
+                     <li class="d-ib ta-c">上月</li>
+                </ul>
+                <div class="c-b"></div>
+            </div>
+            <div class="more-type more-type4">
+                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                    <li class="d-ib ta-c active">实时数据</li>
+                    <li class="d-ib ta-c">分钟数据</li>
+                    <li class="d-ib ta-c">小时数据</li>
+                    <li class="d-ib ta-c">日数据</li>
+                </ul>
+                <div class="c-b"></div>
+            </div>
+            <div class="more-type">
+                <a href="javascript:;" class="inquiry-a d-ib ta-c">查询</a>
+            </div>
+        </div>
+        <div class="search-shrink p-a d-n"></div>
+    </div>
+    <div class="curve-box ta-c fs-24 c-9 bg-f">
+        <div class="curve-img">
+            
+        </div>
+        <div class="contrast">
+            <div class="contrast-left d-ib f-l">
+                 不同排放口统一时间段对比
+            </div>
+            <div class="contrast-right d-ib f-r">
+                 不同时间段同一排放口对比
+            </div>
+            <div class="c-b"></div>
+        </div>
+    </div>
+</div>
+
+<div class="more-hint p-f d-n"></div>
+
+<div class="time-contrast p-f ta-c w d-n">
+    <div class="time-pop d-ib bg-f">
+        <h5 class="fs-26 c-3">不同时间段同一排放口对比</h5>
+        <div class="time-box">
+            <span class="fs-24 c-6">开始时间：</span>
+            <input id="inpstart1" name="time3" value="" placeholder="请选择" readonly="" type="text">
+        </div>
+        <div class="time-box">
+            <span class="fs-24 c-6">开始时间：</span>
+            <input id="inpend1" name="time4" value="" placeholder="请选择" readonly="" type="text">
+        </div>
+        <div class="key fs-26rem">
+            <a href="javascript:;" class="d-ib cancel">取消</a>
+            <a href="javascript:;" class="d-ib start">开始对比</a>
+        </div>
+    </div>
+</div>
+<div class="let-contrast p-f ta-c w d-n">
+    <div class="let-pop d-ib bg-f">
+        <h5 class="fs-26 c-3">不同时间段同一排放口对比</h5>
+        <div class="let-box ta-l">
+            <span class="fs-24 c-6 d-ib">区域：</span>
+            <select class="js-select180 select-normal">
+                <option>一级区域</option>
+                <option>请选择</option>
+            </select>
+            <select class="js-select180 select-normal">
+                <option>二级区域</option>
+                <option>请选择</option>
+            </select>
+        </div>
+        <div class="let-box ta-l">
+            <span class="fs-24 c-6 d-ib">企业：</span>
+            <select class="js-select180 select-normal">
+                <option>企业</option>
+                <option>请选择</option>
+            </select>
+        </div>
+        <div class="let-box ta-l">
+            <span class="fs-24 c-6 d-ib">排放口：</span>
+            <select class="js-select180 select-normal">
+                <option>排放口</option>
+                <option>请选择</option>
+            </select>
+        </div>
+        <div class="key fs-26rem ta-c">
+            <a href="javascript:;" class="d-ib cancel">取消</a>
+            <a href="javascript:;" class="d-ib start">开始对比</a>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery.jedate.js"></script>
+<script src="js/select2_option.js"></script>
+<script>
+    $(".more").click(function(){
+        $(this).hide();
+        $(".more-box,.search-shrink").show();
+        $(".timely-search .select2-container").css("margin","0 0.25rem 0 0.18rem")
+    })
+    $(".search-shrink,.inquiry-a").click(function(){
+        $(".more-box,.search-shrink").hide();
+        $(".more").show();
+        $(".timely-search .select2-container").css("margin","0 0.06rem 0 0")
+    })
+    $(".contrast-left").click(function(){
+        $(".time-contrast").show();
+    })
+    $(".contrast-right").click(function(){
+        $(".let-contrast").show();
+    })
+    $(".cancel,.start").click(function(){
+        $(".time-contrast,.let-contrast").hide();
+    })
+
+
+    //实现日期选择联动
+	var start = {
+		format: 'YYYY-MM-DD hh:mm:ss',
+		choosefun: function(elem,datas){
+			end.minDate = datas; //开始日选好后，重置结束日的最小日期
+			endDates();
+		}
+	};
+	var end = {
+		format: 'YYYY-MM-DD hh:mm:ss',
+		choosefun: function(elem,datas){
+			start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
+		}
+	};
+	function endDates() {
+		end.trigger = false;
+		$("#inpend").jeDate(end);
+	}
+	$("#inpstart").jeDate(start);
+	$("#inpend").jeDate(end);
+
+    //实现日期选择联动2
+	var start = {
+		format: 'YYYY-MM-DD hh:mm:ss',
+		choosefun: function(elem,datas){
+			end.minDate = datas; //开始日选好后，重置结束日的最小日期
+			endDates();
+		}
+	};
+	var end = {
+		format: 'YYYY-MM-DD hh:mm:ss',
+		choosefun: function(elem,datas){
+			start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
+		}
+	};
+	function endDates() {
+		end.trigger = false;
+		$("#inpend1").jeDate(end);
+	}
+	$("#inpstart1").jeDate(start);
+	$("#inpend1").jeDate(end);
+</script>
+
+    
+
+
+
+

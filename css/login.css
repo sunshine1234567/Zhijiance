@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+.login-body{background:#3AAAED;}
+.login-logo{margin: 1rem 0 0.4rem 0;}
+.login-logo img{width:2.27rem;height:3.33rem;}
+.userName-box{width:6.05rem;height:0.55rem;margin-bottom:0.6rem;border-bottom: 1px solid #fff;background: url(../img/login1.png) no-repeat top left;background-size:0.35rem 0.42rem;}
+.password-box{width:6.05rem;height:0.55rem;border-bottom: 1px solid #fff;background: url(../img/login2.png) no-repeat top left;background-size:0.32rem 0.41rem;}
+#username,#password{width:5.2rem;height:0.4rem;margin:0 0 0.1rem 0.57rem;font-size: 0.31rem;border-left:1px solid #fff;text-indent:0.35rem;background:none;color:#fff;}
+
+/*记住密码按钮*/
+.remember{height:0.6rem;margin:0.5rem 0.7rem 0 0;}
+.remember span{height:0.6rem;line-height: 0.6rem;margin-left: 0.3rem;}
+.remember .voucher-sub + label {height: 0.58rem;border-radius: 0.58rem;line-height:0.58rem;display: inline-block;position: relative;background: #ccc;width: 1.02rem;}
+.remember .voucher-sub + label:before {content: ' ';position: absolute;background: #FFF;top:0.03rem;z-index: 99999;left: 0px;color: #FFF;width: 0.52rem;height: 0.52rem;border-radius: 0.52rem}
+.remember .voucher-sub:checked + label {background: #0080CC;}
+.remember .voucher-sub:checked + label:before {content: ' ';position: absolute;z-index: 99999;left: 0.52rem;top:0.03rem}
+.remember .voucher-sub + label:after, .remember .voucher-sub + label:before {	
+-webkit-transition: all 0.1s ease-in;transition: all 0.1s ease-in;}
+
+.submit{font-size: 0.4rem;width: 5.98rem;height: 0.88rem;line-height:0.88rem;color:#fff;border:1px solid #fff;border-radius:0.1rem;margin: 0.5rem auto 2rem;}
+
+
+
+

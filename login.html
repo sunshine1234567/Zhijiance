@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>智监测</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<link href="css/base-wx.css" rel="stylesheet" type="text/css">
+<link href="css/login.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="login-body">
+    <div class="content">
+        <div class="login-logo ta-c">
+            <img src="img/logo2.png" alt="">
+        </div>
+        <div class="login-box ta-c">
+            <form action="" method="post" id="login" class="fs-16">
+                <div class="userName-box d-ib ta-l">
+                    <input type="text" id="username" name="userName" value="" maxlength="20" placeholder="请输入用户名"/>
+                </div>
+                <div class="password-box d-ib ta-l">
+                    <input type="password" id="password" name="password" value="" maxlength="22" placeholder="请输入密码"/>
+                </div>
+                <div class="remember ta-r">
+                    <span class="fs-30 c-f d-ib f-r">记住密码</span>
+                    <div class="d-ib f-r">
+                        <input type="checkbox" id="checkbox_d2" value="1" class="voucher-sub d-n" checked="checked"/>		
+                        <label for="checkbox_d2"></label>
+                    </div>
+                    <div class="c-b"></div>
+                </div>
+                <a href="index.html" class="submit ta-c d-ib fs-40">登录</a>
+            </form>
+        </div>
+        <div class="c-b"></div>
+    </div>
+    <p class="copyright fs-23 c-f ta-c">北京万维盈创科技发展有限公司</p>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/hotcss.js"></script>
+<script>
+$(".submit").click(function(){
+	$("#login").submit();
+})
+
+$(".voucher-sub").click(function(){
+    if($(this).attr("checked")){
+        $(this).val("1");
+    }else{
+        $(this).val("0");
+    };
+});
+
+</script>
+</html>

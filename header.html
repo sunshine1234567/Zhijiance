@@ -1,0 +1,102 @@
+<!--头部-->
+<div class="herder c-f ta-c p-r">
+    <div class="search p-a ta-l">
+        <span class="c-f fs-26 d-ib tji">排放口与数据状态统计</span>
+        <select class="js-select180 select-normal">
+            <option>选择区域</option>
+            <option>请选择</option>
+        </select>
+        <select class="js-select180 select-normal">
+            <option>选择区域</option>
+            <option>请选择</option>
+        </select>
+        <a href="javascript:;" class="search-a d-ib f-r"></a>
+    </div>
+    <a href="javascript:;" class="search-a d-ib f-l"></a>
+    <a href="javascript:;" class="nav-a d-n f-l"></a>
+    <span class="title d-ib fs-32">首页</span>
+    <a href="javascript:;" class="set-a d-ib f-r"></a>
+    <a href="javascript:;" class="fork-a d-n f-r"></a>
+    <div class="c-b"></div>
+    <div class="set-box p-a fs-24 ta-l d-n">
+        <a href="javascript:;" class="seta1" onclick="switchs(15)">修改密码</a>
+        <a href="javascript:;" class="seta2" onclick="switchs(13)">设置</a>
+        <a href="javascript:;" class="seta3" onclick="switchs(14)">关于</a>
+        <a href="javascript:;" class="seta4 quit">退出</a>
+    </div>
+</div>
+
+<div class="count-box d-n">
+    <div id="count">
+        <table id="count-table"></table>
+        <div class="count-shrink"></div>
+    </div>
+</div>
+
+<div class="quit-top">
+    <div class="quit-box w p-f ta-c d-n">
+        <h5 class="c-6">确认退出</h5>
+        <a href="javascript:;" class="confirm d-b">确定</a>
+        <a href="javascript:;" class="cancel d-b">取消</a>
+    </div>
+</div>
+<script src="js/select2_option.js"></script>
+<script src="table/count-table.js"></script>
+<script>
+    $(".set-a").click(function(){
+        $(".set-box").fadeToggle();
+    });
+    $(".search-a").click(function(){
+        $(".count-box").toggle();
+        var sidebar_width = $(".search").width();
+        if(sidebar_width == 0){
+			$(".search").css({"width":"100%"});
+		}else{
+			$(".search").css({"width":"0rem"});
+		}
+    })
+    $(".nav-a").click(function(){
+        $(".recall").show();
+        var sidebar_w = $(".sidebar").width();
+        if( sidebar_w == 0){
+            $(".sidebar").css({"width":"5.92rem"});
+            $("#content").css({"left":"5.92rem"});
+        }
+    })
+    $(".recall").click(function(){
+        $(this).hide();
+        $(".sidebar").css({"width":"0px"});
+        $("#content").css({"left":"0px"});
+    })
+
+    $(".count-shrink").click(function(){
+        $("#count").slideToggle();
+    })
+
+    $(".quit").click(function(){
+        $(".quit-box").fadeIn();
+    })
+    $(".confirm,.cancel").click(function(){
+        $(".quit-box").fadeOut();
+    })
+
+    $(".set-box a").click(function(){
+        $(".set-box").hide();
+        $(this).addClass('set-active').siblings().removeClass('set-active');
+    })
+    $(".fork-a").click(function(){
+        $("#content-box").load('homepage.html');
+        $(".title").text("首页");
+        $(".search-a,.set-a").show();
+        $(".nav-a,.fork-a").hide();
+    })
+
+
+    function herder(){
+        $(".search-a,.set-a").hide();
+        $(".nav-a,.fork-a").show();
+    }
+</script>
+
+
+
