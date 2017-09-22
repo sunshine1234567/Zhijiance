@@ -61,16 +61,16 @@
 
     <div class="colligate-box"> 
         <ul class="ulf-l fs-24">
-            <li class="colligate-li1 d-ib ">
+            <li class="colligate-li1 d-ib" onclick="switchs(10)">
                 <p>污染</br>数据完整率</p>
             </li>
-            <li class="colligate-li2 d-ib">
+            <li class="colligate-li2 d-ib" onclick="switchs(11)">
                 <p>数据</br>传输完整率</p>
             </li>
             <li class="colligate-li3 d-ib active">
                 <p>在线</br>仪器运转率</p>
             </li>
-            <li class="colligate-li4 d-ib">
+            <li class="colligate-li4 d-ib" onclick="switchs(19)">
                 <p>任务</br>完成率</p>
             </li>
             <div class="c-b"></div>
@@ -119,6 +119,9 @@
 
 <script src="js/select2_option.js"></script>
 <script>
+    $('.more-right li').click(function(){
+    	$(this).addClass('active').siblings().removeClass('active');
+    })
     $(".more").click(function(){
         $(this).hide();
         $(".more-box,.search-shrink").show();

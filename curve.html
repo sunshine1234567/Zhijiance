@@ -70,7 +70,9 @@
     </div>
     <div class="curve-box ta-c fs-24 c-9 bg-f">
         <div class="curve-img">
-            
+            <p class="fs-24 c-3">兴水污水处理厂废水出口监测因子数据曲线图</p>
+            <p class="fs-22 c-9">2017-06-26    00:00:00     ——    2017-06-29    00:00:00</p>
+            <div class="graph2"></div>
         </div>
         <div class="contrast">
             <div class="contrast-left d-ib f-l">
@@ -142,16 +144,75 @@
 <script type="text/javascript" src="js/jquery.jedate.js"></script>
 <script src="js/select2_option.js"></script>
 <script>
+$(function(){
+    $('.graph2').highcharts({
+        title: { text:null, },
+        legend: { enabled: false },
+        colors: ['#3930DB','#FE1212','#E89C7B','#A770C1','#C17070','#B6204E','#7070C1','#C1AF70','#474747'],
+        tooltip: {
+            backgroundColor: '#4C4C4C',
+            borderWidth: 0,
+            style: {
+                color: "#ffffff",
+                fontWeight: "100",
+                textAlign:"center",
+            }
+        },
+        chart: {
+            type: 'spline',
+        },
+        xAxis: {
+            tickWidth:0,
+            categories: ['0:00:00','0:30:30','1:00:00','1:30:00','2:00:00','2:30:00','3:00:00','3:30:00','4:00:00','4:30:00','5:00:00','5:30:00','6:00:00'
+            ,'6:30:00','7:00:00','7:30:00','8:00:00','8:30:00','9:00:00','9:30:00','10:00:00','10:30:00','11:00:00','11:30:00','12:00:00'
+            ,'12:30:00','13:00:00','13:30:00','14:00:00','14:30:00','15:00:00','15:30:00','16:00:00','16:30:00','17:00:00','17:30:00','18:00:00'
+            ,'18:30:00','19:00:00','19:30:00','20:00:00','20:30:00','21:00:00','21:30:00','22:00:00','22:30:00','23:00:00','23:30:00','24:00:00']
+        },
+        yAxis:{
+            title:'',  
+            gridLineWidth:'0px',
+            lineWidth: 1
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 1,
+                states: {
+                    hover: {
+                        lineWidth: 1
+                    }
+                },
+            }
+        },
+        series: [{
+            name: '废气流量(m³、/h)',
+            data: [100,130,150,300,200,150,350,310,280,120,280,340,430,520,320,253,125,452,352,215,140,263,125,100,123,155,240,280,180,350,310,223,186,350,260,150,430,350,263,195,262,142,355,260,183,125,355]
+        }, {
+            name: '烟尘(m³、/h)',
+            data: [350,420,500,520,400,450,350,310,280,320,280,370,430,420,520,453,325,452,382,415,340,263,325,200,223,255,340,380,380,250,210,223,186,350,260,350,430,350,263,395,462,442,355,260,183,525,355]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+})
+</script>
+<script>
+    $('.more-right li').click(function(){
+    	$(this).addClass('active').siblings().removeClass('active');
+    })
     $(".more").click(function(){
         $(this).hide();
         $(".more-box,.search-shrink").show();
         $(".timely-search .select2-container").css("margin","0 0.25rem 0 0.18rem")
     })
-    $(".search-shrink,.inquiry-a").click(function(){
+    $(".search-shrink").click(function(){
         $(".more-box,.search-shrink").hide();
         $(".more").show();
         $(".timely-search .select2-container").css("margin","0 0.06rem 0 0")
     })
+    
     $(".contrast-left").click(function(){
         $(".time-contrast").show();
     })

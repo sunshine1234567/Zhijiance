@@ -61,7 +61,7 @@
 
     <div class="colligate-box"> 
         <ul class="ulf-l fs-24">
-            <li class="colligate-li1 d-ib active">
+            <li class="colligate-li1 d-ib" onclick="switchs(10)">
                 <p>污染</br>数据完整率</p>
             </li>
             <li class="colligate-li2 d-ib" onclick="switchs(11)">
@@ -70,12 +70,12 @@
             <li class="colligate-li3 d-ib" onclick="switchs(12)">
                 <p>在线</br>仪器运转率</p>
             </li>
-            <li class="colligate-li4 d-ib" onclick="switchs(19)">
+            <li class="colligate-li4 d-ib active">
                 <p>任务</br>完成率</p>
             </li>
             <div class="c-b"></div>
         </ul>
-        <div class="colligate-box1">
+        <div class="colligate-box1 taskrate-list">
             <div class="circle-box d-ib f-l p-r">
                 <div class="container container1"></div>
                 <span class="d-ib p-a fs-20 bai">40%</span>
@@ -110,8 +110,8 @@
             </div>
             <div class="c-b"></div>
             <div class="ment ta-c fs-26 c-3">
-                <span class="ment-span1 d-ib"><i class="d-ib"></i>完整</span>
-                <span class="ment-span2 d-ib"><i class="d-ib"></i>缺失</span>
+                <span class="ment-span1 d-ib"><i class="d-ib"></i>完成</span>
+                <span class="ment-span2 d-ib"><i class="d-ib"></i>未完成</span>
             </div>
         </div>
     </div>
@@ -133,9 +133,6 @@
         $(".timely-search .select2-container").css("margin","0 0.06rem 0 0")
     })
 
-
-
-
 var chart = null;
 $(function () {
     $('.container1').highcharts({
@@ -150,7 +147,7 @@ $(function () {
         ],
         title: {
             floating:true,
-            text: '氨氮'
+            text: '排放口 离线任务 '
         },
         plotOptions: {
             pie: {
@@ -174,7 +171,7 @@ $(function () {
         var centerY = c.series[0].center[1],
             titleHeight = parseInt(c.title.styles.fontSize);
         c.setTitle({
-            y:centerY + titleHeight/4
+            y:centerY + titleHeight/100
         });
         chart = c;
     });
@@ -190,7 +187,7 @@ $(function () {
         ],
         title: {
             floating:true,
-            text: '有机氮'
+            text: '实时数据超 标报警任务'
         },
         plotOptions: {
             pie: {
@@ -214,7 +211,7 @@ $(function () {
         var centerY = c.series[0].center[1],
             titleHeight = parseInt(c.title.styles.fontSize);
         c.setTitle({
-            y:centerY + titleHeight/4
+            y:centerY + titleHeight/100
         });
         chart = c;
     });
@@ -230,7 +227,7 @@ $(function () {
         ],
         title: {
             floating:true,
-            text: '总磷'
+            text: '分钟数据超 标报警任务'
         },
         plotOptions: {
             pie: {
@@ -254,7 +251,7 @@ $(function () {
         var centerY = c.series[0].center[1],
             titleHeight = parseInt(c.title.styles.fontSize);
         c.setTitle({
-            y:centerY + titleHeight/4
+            y:centerY + titleHeight/100
         });
         chart = c;
     });
@@ -270,7 +267,7 @@ $(function () {
         ],
         title: {
             floating:true,
-            text: '流量'
+            text: '小时数据超 标报警任务'
         },
         plotOptions: {
             pie: {
@@ -294,7 +291,7 @@ $(function () {
         var centerY = c.series[0].center[1],
             titleHeight = parseInt(c.title.styles.fontSize);
         c.setTitle({
-            y:centerY + titleHeight/4
+            y:centerY + titleHeight/100
         });
         chart = c;
     });
@@ -310,7 +307,7 @@ $(function () {
         ],
         title: {
             floating:true,
-            text: 'PH值'
+            text: '日数据超标 报警任务'
         },
         plotOptions: {
             pie: {
@@ -334,7 +331,7 @@ $(function () {
         var centerY = c.series[0].center[1],
             titleHeight = parseInt(c.title.styles.fontSize);
         c.setTitle({
-            y:centerY + titleHeight/4
+            y:centerY + titleHeight/100
         });
         chart = c;
     });
@@ -350,7 +347,7 @@ $(function () {
         ],
         title: {
             floating:true,
-            text: 'COD'
+            text: '数据呆滞 报警任务'
         },
         plotOptions: {
             pie: {
@@ -374,87 +371,7 @@ $(function () {
         var centerY = c.series[0].center[1],
             titleHeight = parseInt(c.title.styles.fontSize);
         c.setTitle({
-            y:centerY + titleHeight/4
-        });
-        chart = c;
-    });
-    $('.container7').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-        },
-        colors:[
-        '#74B3E9',//第一个颜色
-        '#BABABA',//第二个颜色
-        ],
-        title: {
-            floating:true,
-            text: '总铜'
-        },
-        plotOptions: {
-            pie: {
-                dataLabels: {
-                    enabled: false
-                },
-            }
-        },
-        series: [{
-            type: 'pie',
-            innerSize: '73%',
-            borderWidth: 1,
-            borderColor: null,
-            data: [
-                ['总铜', 40.0],
-                ['非总铜', 60.0],
-            ]
-        }]
-    }, function(c) {
-        // 环形图圆心
-        var centerY = c.series[0].center[1],
-            titleHeight = parseInt(c.title.styles.fontSize);
-        c.setTitle({
-            y:centerY + titleHeight/4
-        });
-        chart = c;
-    });
-    $('.container8').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-        },
-        colors:[
-        '#74B3E9',//第一个颜色
-        '#BABABA',//第二个颜色
-        ],
-        title: {
-            floating:true,
-            text: '总锰'
-        },
-        plotOptions: {
-            pie: {
-                dataLabels: {
-                    enabled: false
-                },
-            }
-        },
-        series: [{
-            type: 'pie',
-            innerSize: '73%',
-            borderWidth: 1,
-            borderColor: null,
-            data: [
-                ['总锰', 40.0],
-                ['非总锰', 60.0],
-            ]
-        }]
-    }, function(c) {
-        // 环形图圆心
-        var centerY = c.series[0].center[1],
-            titleHeight = parseInt(c.title.styles.fontSize);
-        c.setTitle({
-            y:centerY + titleHeight/4
+            y:centerY + titleHeight/100
         });
         chart = c;
     });

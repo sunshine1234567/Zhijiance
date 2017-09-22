@@ -16,6 +16,7 @@
         </div>
         <div class="module5 d-ib p-a situation" onclick="switchs(5)">
             <p>情况管理</p>
+            <i class="expand d-ib p-a"></i>
         </div>
         <div class="module6 d-ib p-a todo" onclick="switchs(6)">
             <p>待办任务</p>
@@ -25,6 +26,7 @@
         </div>
         <div class="module8 d-ib p-a operation" onclick="switchs(8)">
             <p>运维管理</p>
+            <i class="expand d-ib p-a"></i>
         </div>
         <div class="module9 d-ib p-a pollute" onclick="switchs(10)">
             <p>污染源数据完整率</p>
@@ -41,7 +43,7 @@
     </div>
 </div>
 
-<div class="recall d-ib p-f"></div>
+<div class="recall d-ib p-f d-n"></div>
 
 <script>
     $(".sidebar-box div").click(function(){
@@ -80,11 +82,11 @@
                 break;
             case 6:
                 $('#content-box').load('todo.html', function () {
-                    $(".title").text("待办任务");
+                    $(".title").text("任务管理");
                 });
                 break;
             case 7:
-                $('#content-box').load('history.html', function () {
+                $('#content-box').load('todo.html', function () {
                     $(".title").text("历史任务");
                 });
                 break;
@@ -105,7 +107,7 @@
                 break;
             case 11:
                 $('#content-box').load('transfer.html', function () {
-                    $(".title").text("数据传输有效率");
+                    $(".title").text("数据传输完整率");
                 });
                 break;
             case 12:
@@ -131,6 +133,21 @@
             case 16:
                 $('#content-box').load('homepage.html', function () {
                     $(".title").text("首页");
+                });
+                break;
+            case 17:
+                $('#content-box').load('report.html', function () {
+                    $(".title").text("情况上报");
+                });
+                break;
+            case 18:
+                $('#content-box').load('report2.html', function () {
+                    $(".title").text("运维表单上传");
+                });
+                break;
+            case 19:
+                $('#content-box').load('taskrate.html', function () {
+                    $(".title").text("任务完成率");
                 });
                 break;
         }

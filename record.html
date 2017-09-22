@@ -2,15 +2,15 @@
 <div class="timely ta-c fs-30 c-f">
     <div class="timely-search d-ib ta-l bg-f p-r">
         <select class="js-select180 select-normal">
-            <option>山西省</option>
+            <option>一级区域</option>
             <option>请选择</option>
         </select>
         <select class="js-select180 select-normal">
-            <option>太原市</option>
+            <option>二级区域</option>
             <option>请选择</option>
         </select>
         <select class="js-select180 select-normal">
-            <option>热媒电厂</option>
+            <option>企业</option>
             <option>请选择</option>
         </select>
         <a href="javascript:;" class="more d-ib fs-26">更多</a>
@@ -199,7 +199,9 @@
         $(".record-list").show();
     }, 2000);
 
-
+    $('.more-right li').click(function(){
+    	$(this).addClass('active').siblings().removeClass('active');
+    })
     $(".more").click(function(){
         $(this).hide();
         $(".more-box,.search-shrink").show();

@@ -116,8 +116,16 @@ a,a:visited,a:active,a:link{text-decoration: none;}
 /*背景颜色*/
 .bg-f{background:#fff;}
 .bg-0{background:#000;}
-.bg-d{background:#398DE3}
-
+.bg-g1{background:#84CABE}
+.bg-g2{background:#2B7FA3}
+.bg-g3{background:#89C170}
+.bg-g4{background:#708BC1}
+.bg-g5{background:#A770C1}
+.bg-g6{background:#C17070}
+.bg-g7{background:#B6204E}
+.bg-g8{background:#7070C1}
+.bg-g9{background:#C1AF70}
+.bg-g10{background:#474747}
 
 /*宽高*/
 .w{width:100%;}
@@ -142,5 +150,4 @@ a,a:visited,a:active,a:link{text-decoration: none;}
 .key {margin-bottom:0.35rem;}
 .key .cancel{width: 1.38rem;height: 0.48rem;line-height: 0.48rem;border: 1px solid #398DE3;border-radius: 0.05rem;color: #398DE3;margin:0 0.3rem;}
 .key .start{width: 1.4rem;height: 0.5rem;line-height: 0.5rem;border-radius: 0.05rem;background: #398DE3;color: #fff;margin:0 0.3rem;}
-
 

@@ -253,6 +253,9 @@
 <script type="text/javascript" src="js/jquery.jedate.js"></script>
 <script src="js/select2_option.js"></script>
 <script>
+    $('.more-right li').click(function(){
+    	$(this).addClass('active').siblings().removeClass('active');
+    })
     $(".more").click(function(){
         $(this).hide();
         $(".more-box,.search-shrink").show();
@@ -280,9 +283,6 @@
         }
     })
     
-    $('.more-right li').click(function(){
-    	$(this).addClass('active').siblings().removeClass('active');
-    })
 
     //实现日期选择联动
 	var start = {

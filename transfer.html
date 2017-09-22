@@ -61,61 +61,34 @@
 
     <div class="colligate-box"> 
         <ul class="ulf-l fs-24">
-            <li class="colligate-li1 d-ib">
+            <li class="colligate-li1 d-ib" onclick="switchs(10)">
                 <p>污染</br>数据完整率</p>
             </li>
             <li class="colligate-li2 d-ib active">
                 <p>数据</br>传输完整率</p>
             </li>
-            <li class="colligate-li3 d-ib">
+            <li class="colligate-li3 d-ib" onclick="switchs(12)">
                 <p>在线</br>仪器运转率</p>
             </li>
-            <li class="colligate-li4 d-ib">
+            <li class="colligate-li4 d-ib" onclick="switchs(19)">
                 <p>任务</br>完成率</p>
             </li>
             <div class="c-b"></div>
         </ul>
-        <div class="colligate-box1">
-            <div class="circle-box d-ib f-l p-r">
-                <div class="container container1"></div>
-                <span class="d-ib p-a fs-20 bai">40%</span>
+        <div class="transfer-box">
+            <div id="transfer">
+                <table id="transfer-table"></table>
             </div>
-            <div class="circle-box d-ib f-l p-r">
-                <div class="container container2"></div>
-                <span class="d-ib p-a fs-20 bai">40%</span>
-            </div>
-            <div class="circle-box d-ib f-l p-r">
-                <div class="container container3"></div>
-                <span class="d-ib p-a fs-20 bai">40%</span>
-            </div>
-            <div class="circle-box d-ib f-l p-r">
-                <div class="container container4"></div>
-                <span class="d-ib p-a fs-20 bai">40%</span>
-            </div>
-            <div class="circle-box d-ib f-l p-r">
-                <div class="container container5"></div>
-                <span class="d-ib p-a fs-20 bai">40%</span>
-            </div>
-            <div class="circle-box d-ib f-l p-r">
-                <div class="container container6"></div>
-                <span class="d-ib p-a fs-20 bai">40%</span>
-            </div>
-            <div class="circle-box d-ib f-l p-r">
-                <div class="container container7"></div>
-                <span class="d-ib p-a fs-20 bai">40%</span>
-            </div>
-            <div class="circle-box d-ib f-l p-r">
-                <div class="container container8"></div>
-                <span class="d-ib p-a fs-20 bai">40%</span>
-            </div>
-            <div class="c-b"></div>
-
         </div>
     </div>
 </div>
-
 <script src="js/select2_option.js"></script>
+<script src="table/count-table.js"></script>
+
 <script>
+    $('.more-right li').click(function(){
+    	$(this).addClass('active').siblings().removeClass('active');
+    })
     $(".more").click(function(){
         $(this).hide();
         $(".more-box,.search-shrink").show();

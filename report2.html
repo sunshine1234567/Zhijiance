@@ -1,0 +1,79 @@
+<!--运维表单上传-->
+<div class="case-report case-report2 fs-26 c-3 ta-c">
+    <div class="report-list">
+        <span class="d-ib ">一级区域：</span>
+        <select class="js-select330 select-normal">
+            <option>北京市</option>
+            <option>请选择</option>
+        </select>
+    </div>
+    <div class="report-list">
+        <span class="d-ib ">二级区域：</span>
+        <select class="js-select330 select-normal">
+            <option>昌平区</option>
+            <option>请选择</option>
+        </select>
+    </div>
+    <div class="report-list">
+        <span class="d-ib ">企业：</span>
+        <select class="js-select330 select-normal">
+            <option>常山纺织厂</option>
+            <option>请选择</option>
+        </select>
+    </div>
+    <div class="report-list">
+        <span class="d-ib ">排放口：</span>
+        <select class="js-select330 select-normal">
+            <option>废水排放口</option>
+            <option>请选择</option>
+        </select>
+    </div>
+    <div class="report-list">
+        <span class="d-ib ">运维活动：</span>
+        <select class="js-select330 select-normal">
+            <option>巡检</option>
+            <option>请选择</option>
+        </select>
+    </div>
+    <div class="report-list">
+        <span class="d-ib ">备注：</span>
+        <textarea name="report" id="report">二级区域</textarea>
+    </div>
+    <div class="report-list">
+        <span class="d-ib ">文件：</span>
+        <a href="javascript:;" class="papers d-ib"></a>
+    </div>
+    <div class="key fs-26rem ta-c">
+        <a href="javascript:;" class="d-ib cancel">取消</a>
+        <a href="javascript:;" class="d-ib start">确定</a>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.jedate.js"></script>
+<script src="js/select2_option.js"></script>
+<script>
+    //时间控件
+	$("#report-time1").jeDate({
+		isinitVal:true,
+		ishmsVal:false,
+		format:"YYYY-MM-DD hh:mm:ss",
+		zIndex:3000,
+    })
+    $("#report-time2").jeDate({
+		isinitVal:true,
+		ishmsVal:false,
+		format:"YYYY-MM-DD hh:mm:ss",
+		zIndex:3000,
+    })
+    $("#report-time3").jeDate({
+		isinitVal:true,
+		ishmsVal:false,
+		format:"YYYY-MM-DD hh:mm:ss",
+		zIndex:3000,
+	})
+</script>
+    
+
+
+
+
