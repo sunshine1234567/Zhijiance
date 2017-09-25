@@ -41,7 +41,7 @@
     </div>
 </div>
 <script src="js/select2_option.js"></script>
-<script src="table/transfer-table.js"></script>
+<script src="table/count-table.js"></script>
 <script>
     $(".set-a").click(function(){
         $(".set-box").fadeToggle();
@@ -50,7 +50,8 @@
         $(".count-box").toggle();
         var sidebar_width = $(".search").width();
         if(sidebar_width == 0){
-			$(".search").css({"width":"100%"});
+            $(".search").css({"width":"100%"});
+            $("#count").show();
 		}else{
 			$(".search").css({"width":"0rem"});
 		}

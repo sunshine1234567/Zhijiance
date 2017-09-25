@@ -61,6 +61,10 @@
     <div class="report-list">
         <span class="d-ib ">文件：</span>
         <a href="javascript:;" class="papers d-ib"></a>
+        <div class="deletelist-box ta-l">
+            <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+            <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+        </div>
     </div>
     <div class="key fs-26rem ta-c">
         <a href="javascript:;" class="d-ib cancel">取消</a>
@@ -71,6 +75,9 @@
 <script type="text/javascript" src="js/jquery.jedate.js"></script>
 <script src="js/select2_option.js"></script>
 <script>
+    $(".delete-list").click(function(){
+        $(this).parent("p").remove();
+    })
     //时间控件
 	$("#report-time1").jeDate({
 		isinitVal:true,
