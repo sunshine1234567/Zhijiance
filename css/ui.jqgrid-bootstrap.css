@@ -921,3 +921,15 @@ padding: 0 10px;}
 #count #gbox_table1 tr.jqgrow{border-bottom: 1px solid #E7E7E7;}
 #count #gbox_table1 .ui-jqgrid-btable tbody tr.jqgrow td{border-right: 1px solid #E7E7E7;}
 
+#transfer{margin: 0.2rem 0;}
+#transfer .ui-jqgrid .ui-jqgrid-htable thead th div{font-size: 0.24rem;color: #666;}
+#transfer .ui-th-ltr, .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr{background: #E0EDF7}
+#transfer .ui-jqgrid .ui-jqgrid-htable{background: #E3E6E8;}
+#transfer .ui-jqgrid .ui-jqgrid-btable tbody tr.jqgrow td{color: #999;}
+
+
+.process{width:1.72rem;height:0.27rem;border-radius: 0.27rem;border:1px solid #DCDCDC;overflow: hidden;}
+.processbar{display:block;width: 0%;height:100%;background:#74B3E9;float:left;text-align:center;line-height:0.27rem;color: #fff;} 
+.color1{background: #92C153}
+.color2{background: #448ACA}
+

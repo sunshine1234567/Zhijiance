@@ -40,6 +40,19 @@ $(document).ready(function(){
 	$("#tooltip-box").load('tooltip-box.html');
 	$("#content-box").load('homepage.html');
 });
+
+
+function getTop(){
+	var top = $(document).scrollTop();
+	if($(document).scrollTop()>10){
+		$("#return-top").css('display','block');
+	}else{
+		$("#return-top").css('display','none');
+	}
+	setTimeout(getTop);
+}
+getTop();
+
 $("#return-top").click(function(){
 	var speed=200;
 	$('body,html').animate({ scrollTop: 0 }, speed);
