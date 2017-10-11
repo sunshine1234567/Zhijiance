@@ -196,7 +196,15 @@
 <script>
     setTimeout(function () {
         $(".loading").hide();
-        $(".record-list").show();
+        $(".nulldata").show();
+        setTimeout(function () {
+            $(".nulldata").hide();
+            $(".errors").show();
+            setTimeout(function () {
+                $(".errors").hide();
+                $(".record-list").show();
+            }, 2000);
+        }, 2000);
     }, 2000);
 
     $('.more-right li').click(function(){

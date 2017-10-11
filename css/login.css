@@ -5,8 +5,8 @@
 .login-logo img{width:2.27rem;height:3.33rem;}
 .userName-box{width:6.05rem;height:0.55rem;margin-bottom:0.6rem;border-bottom: 1px solid #fff;background: url(../img/login1.png) no-repeat top left;background-size:0.35rem 0.42rem;}
 .password-box{width:6.05rem;height:0.55rem;border-bottom: 1px solid #fff;background: url(../img/login2.png) no-repeat top left;background-size:0.32rem 0.41rem;}
-#username,#password{width:5.2rem;height:0.4rem;margin:0 0 0.1rem 0.57rem;font-size: 0.31rem;border-left:1px solid #fff;text-indent:0.35rem;background:none;color:#fff;}
-
+#username,#password{width:5.2rem;height:0.4rem;margin:0 0 0.1rem 0;font-size: 0.31rem;text-indent:0.32rem;background:none;color:#fff;border-radius: 0;}
+.xian{height:0.4rem;border-left:1px solid #fff;vertical-align: top;margin-left: 0.6rem;}
 /*记住密码按钮*/
 .remember{height:0.6rem;margin:0.5rem 0.7rem 0 0;}
 .remember span{height:0.6rem;line-height: 0.6rem;margin-left: 0.3rem;}

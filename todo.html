@@ -10,11 +10,11 @@
             <option>请选择</option>
         </select>
         <a href="javascript:;" class="more d-ib fs-26">更多</a>
+        <div class="todo-type">
+            <input type="text" class="task-name" placeholder="请输入任务名称">
+            <a href="javascript" class="d-ib"></a>
+        </div>
         <div class="more-box d-n">
-            <div class="todo-type">
-                <input type="text" class="task-name" placeholder="请输入任务名称">
-                <a href="javascript" class="d-ib"></a>
-            </div>
             <div class="more-type">
                 <div class="more-left d-ib fs-24 c-6 ta-l f-l">
                     <span>开始时间：</span>
@@ -81,7 +81,7 @@
                     <p class="situation-p c-9"><span class="d-ib c-6">发布人:</span>李四</p>
                     <p class="situation-p c-9"><span class="d-ib c-6">任务类型:</span>运维任务</p>
                     <p class="situation-p c-9"><span class="d-ib c-6">开始时间:</span>2017-03-13 10:00:02</p>
-                    <div class="relieve2">
+                    <div class="relieve2 relieve-padding">
                         <div class="relieve2-list">
                             <span class="d-ib ta-l">实际完成时间:</span>
                             <input id="todo-time" name="todo-time" value="" placeholder="请选择时间" readonly="" type="text">
@@ -96,7 +96,9 @@
                         </div>
                         <div class="relieve2-list">
                             <span class="d-ib ta-l">文件:</span>
-                            <a href="javascript" class="papers d-ib"></a>
+                            <a href="javascript:;" class="papers d-ib">
+                                <input type="file" id="f4">
+                            </a>
                             <div class="deletelist-box ta-l">
                                 <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
                                 <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
