@@ -1,76 +1,78 @@
 <!--任务管理-->
 <div class="timely ta-c fs-30 c-f">
-    <div class="timely-search todo-search d-ib ta-l bg-f p-r">
-        <select class="js-select285 select-normal">
-            <option>任务类型</option>
-            <option>请选择</option>
-        </select>
-        <select class="js-select285 select-normal">
-            <option>任务类型</option>
-            <option>请选择</option>
-        </select>
-        <a href="javascript:;" class="more d-ib fs-26">更多</a>
-        <div class="todo-type">
-            <input type="text" class="task-name" placeholder="请输入任务名称">
-            <a href="javascript" class="d-ib"></a>
+    <form id="form-todo1" method="post" action="">
+        <div class="timely-search todo-search d-ib ta-l bg-f p-r">
+            <select class="js-select285 select-normal">
+                <option>任务类型</option>
+                <option>请选择</option>
+            </select>
+            <select class="js-select285 select-normal">
+                <option>任务类型</option>
+                <option>请选择</option>
+            </select>
+            <a href="javascript:;" class="more d-ib fs-26">更多</a>
+            <div class="todo-type">
+                <input type="text" class="task-name" placeholder="请输入任务名称">
+                <a href="javascript" class="d-ib"></a>
+            </div>
+            <div class="more-box d-n">
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>开始时间：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <input  id="inpstart" class="input" type="text" name="time1" readonly  placeholder="请填写开始时间" />
+                    </ul>
+                    <div class="c-b"></div>
+                </div>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>结束时间：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <input id="inpend" name="time2" value="" placeholder="请选择" readonly type="text">
+                    </ul>
+                    <div class="c-b"></div>
+                </div>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>状态类别：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <li class="d-ib ta-c active">全部</li>
+                        <li class="d-ib ta-c">排放口离线报警</li>
+                        <li class="d-ib ta-c">实时数据超标报警</li>
+                        <li class="d-ib ta-c">分钟数据超标报警</li>
+                        <li class="d-ib ta-c">小时数据超标报警</li>
+                        <li class="d-ib ta-c">日数据超标报警</li>
+                        <li class="d-ib ta-c">数据呆滞报警</li>
+                    </ul>
+                    <div class="c-b"></div>
+                </div>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>审核状态：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <li class="d-ib ta-c active">全部</li>
+                        <li class="d-ib ta-c">待上报</li>
+                        <li class="d-ib ta-c">待审核</li>
+                        <li class="d-ib ta-c">审核通过</li>
+                        <li class="d-ib ta-c">审核未通过</li>
+                    </ul>
+                    <div class="c-b"></div>
+                </div>
+                <div class="key fs-26rem ta-c">
+                    <a href="javascript:;" class="d-ib start">查询</a>
+                </div>  
+            </div>
+            <div class="search-shrink p-a d-n"></div>
         </div>
-        <div class="more-box d-n">
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                    <span>开始时间：</span>
-                </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <input id="inpstart" name="time1" value="" placeholder="请选择" readonly="" type="text">
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                    <span>结束时间：</span>
-                </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <input id="inpend" name="time2" value="" placeholder="请选择" readonly="" type="text">
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                    <span>状态类别：</span>
-                </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <li class="d-ib ta-c active">全部</li>
-                    <li class="d-ib ta-c">排放口离线报警</li>
-                    <li class="d-ib ta-c">实时数据超标报警</li>
-                    <li class="d-ib ta-c">分钟数据超标报警</li>
-                    <li class="d-ib ta-c">小时数据超标报警</li>
-                    <li class="d-ib ta-c">日数据超标报警</li>
-                    <li class="d-ib ta-c">数据呆滞报警</li>
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                    <span>审核状态：</span>
-                </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <li class="d-ib ta-c active">全部</li>
-                    <li class="d-ib ta-c">待上报</li>
-                    <li class="d-ib ta-c">待审核</li>
-                    <li class="d-ib ta-c">审核通过</li>
-                    <li class="d-ib ta-c">审核未通过</li>
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="key fs-26rem ta-c">
-                <a href="javascript:;" class="d-ib start">查询</a>
-            </div>  
-        </div>
-        <div class="search-shrink p-a d-n"></div>
-    </div>
+    </form>
     <div class="situation-box ta-c">
         <div class="timely-details todo ta-l d-ib p-r">
             <div class="police">
-                <div class=" police-box fs-26 c-9">
+                <div class="police-box fs-26 c-9">
                     <div class="police-p1">
                         <span class="f-l c-3 fs-28">20170316中宇钢铁厂实时数据超标报警任务</span>
                         <span class="f-r c-398de3">待上报</span>
@@ -81,34 +83,93 @@
                     <p class="situation-p c-9"><span class="d-ib c-6">发布人:</span>李四</p>
                     <p class="situation-p c-9"><span class="d-ib c-6">任务类型:</span>运维任务</p>
                     <p class="situation-p c-9"><span class="d-ib c-6">开始时间:</span>2017-03-13 10:00:02</p>
-                    <div class="relieve2 relieve-padding">
-                        <div class="relieve2-list">
-                            <span class="d-ib ta-l">实际完成时间:</span>
-                            <input id="todo-time" name="todo-time" value="" placeholder="请选择时间" readonly="" type="text">
-                        </div>
-                        <div class="relieve2-list">
-                            <span class="d-ib ta-l">处理描述:</span>
-                            <textarea name="result" id="result">二级区域</textarea>
-                        </div>
-                        <div class="relieve2-list">
-                            <span class="d-ib ta-l">备注:</span>
-                            <textarea name="remark" id="remark">二级区域</textarea>
-                        </div>
-                        <div class="relieve2-list">
-                            <span class="d-ib ta-l">文件:</span>
-                            <a href="javascript:;" class="papers d-ib">
-                                <input type="file" id="f4">
-                            </a>
-                            <div class="deletelist-box ta-l">
-                                <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
-                                <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                    <div class="key fs-26rem ta-c">
+                        <a href="javascript:;" class="d-ib editor">编辑</a>
+                        <a href="javascript:;" class="d-ib start">提交</a>
+                    </div>
+                    <form id="form-todo2" method="post" action="" class="d-n">
+                        <div class="relieve2 relieve-padding">
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">实际完成时间:</span>
+                                <input id="todo-time" name="todo-time" value="" placeholder="请选择时间" readonly="" type="text">
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">处理描述:</span>
+                                <textarea name="result" id="result" placeholder="请输入处理描述"></textarea>
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">备注:</span>
+                                <textarea name="remark" id="remark" placeholder="请输入备注"></textarea>
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">文件:</span>
+                                <a href="javascript:;" class="papers d-ib">
+                                    <input type="file" id="f4">
+                                </a>
+                                <div class="deletelist-box ta-l">
+                                    <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                                    <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                                </div>
+                            </div>
+                            <div class="key fs-26rem ta-c">
+                                <a href="javascript:;" class="d-ib cancel">取消</a>
+                                <a href="javascript:;" class="d-ib start">确定</a>
                             </div>
                         </div>
-                        <div class="key fs-26rem ta-c">
-                            <a href="javascript:;" class="d-ib cancel">取消</a>
-                            <a href="javascript:;" class="d-ib start">确定</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="timely-details todo ta-l d-ib p-r">
+            <div class="police">
+                <div class=" police-box fs-26 c-9">
+                    <div class="police-p1">
+                        <span class="f-l c-3 fs-28">20170316中宇钢铁厂实时数据超标报警任务</span>
+                        <span class="f-r c-398de3">待上报</span>
+                        <div class="c-b"></div>
+                    </div>
+                    <p class="c-6 todo-p1">COD，监测值=35.00mg/l,上限值=30.00mg/l</p>
+                    <p class="situation-p c-9"><span class="d-ib c-6">责任人:</span>王五</p>
+                    <p class="situation-p c-9"><span class="d-ib c-6">发布人:</span>李四</p>
+                    <p class="situation-p c-9"><span class="d-ib c-6">任务类型:</span>运维任务</p>
+                    <p class="situation-p c-9"><span class="d-ib c-6">开始时间:</span>2017-03-13 10:00:02</p>
+                    <p class="situation-p c-9"><span class="d-ib c-6">处理描述:</span>巴歇尔槽漏水 导致设备无法采样 </p>
+                    <p class="situation-p c-9"><span class="d-ib c-6">处理描述:</span>现场数采仪信号不好王五</p>
+                    <p class="situation-p c-9"><span class="d-ib c-6">备注:</span>无</p>
+                    <div class="key fs-26rem ta-c">
+                        <a href="javascript:;" class="d-ib editor">编辑</a>
+                        <a href="javascript:;" class="d-ib start">提交</a>
+                    </div>
+                    <form id="form-todo2" method="post" action="" class="d-n">
+                        <div class="relieve2 relieve-padding">
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">实际完成时间:</span>
+                                <input id="todo-time" name="todo-time" value="" placeholder="请选择时间" readonly="" type="text">
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">处理描述:</span>
+                                <textarea name="result" id="result" placeholder="请输入处理描述"></textarea>
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">备注:</span>
+                                <textarea name="remark" id="remark" placeholder="请输入备注"></textarea>
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">文件:</span>
+                                <a href="javascript:;" class="papers d-ib">
+                                    <input type="file" id="f4">
+                                </a>
+                                <div class="deletelist-box ta-l">
+                                    <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                                    <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                                </div>
+                            </div>
+                            <div class="key fs-26rem ta-c">
+                                <a href="javascript:;" class="d-ib cancel">取消</a>
+                                <a href="javascript:;" class="d-ib start">确定</a>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -128,33 +189,40 @@
                     <p class="situation-p c-9"><span class="d-ib c-6">处理描述:</span>巴歇尔槽漏水 导致设备无法采样 </p>
                     <p class="situation-p c-9"><span class="d-ib c-6">处理描述:</span>现场数采仪信号不好王五</p>
                     <p class="situation-p c-9"><span class="d-ib c-6">备注:</span>无</p>
-                </div>
-                <div class="key fs-26rem ta-c">
-                    <a href="javascript:;" class="d-ib cancel">编辑</a>
-                    <a href="javascript:;" class="d-ib start">提交</a>
-                </div>
-            </div>
-        </div>
-        <div class="timely-details todo ta-l d-ib p-r">
-            <div class="police">
-                <div class=" police-box fs-26 c-9">
-                    <div class="police-p1">
-                        <span class="f-l c-3 fs-28">20170316中宇钢铁厂实时数据超标报警任务</span>
-                        <span class="f-r c-398de3">待上报</span>
-                        <div class="c-b"></div>
+                    <div class="key fs-26rem ta-c">
+                        <a href="javascript:;" class="d-ib editor">编辑</a>
+                        <a href="javascript:;" class="d-ib start">提交</a>
                     </div>
-                    <p class="c-6 todo-p1">COD，监测值=35.00mg/l,上限值=30.00mg/l</p>
-                    <p class="situation-p c-9"><span class="d-ib c-6">责任人:</span>王五</p>
-                    <p class="situation-p c-9"><span class="d-ib c-6">发布人:</span>李四</p>
-                    <p class="situation-p c-9"><span class="d-ib c-6">任务类型:</span>运维任务</p>
-                    <p class="situation-p c-9"><span class="d-ib c-6">开始时间:</span>2017-03-13 10:00:02</p>
-                    <p class="situation-p c-9"><span class="d-ib c-6">处理描述:</span>巴歇尔槽漏水 导致设备无法采样 </p>
-                    <p class="situation-p c-9"><span class="d-ib c-6">处理描述:</span>现场数采仪信号不好王五</p>
-                    <p class="situation-p c-9"><span class="d-ib c-6">备注:</span>无</p>
-                </div>
-                <div class="key fs-26rem ta-c">
-                    <a href="javascript:;" class="d-ib cancel">编辑</a>
-                    <a href="javascript:;" class="d-ib start">提交</a>
+                    <form id="form-todo2" method="post" action="" class="d-n">
+                        <div class="relieve2 relieve-padding">
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">实际完成时间:</span>
+                                <input id="todo-time" name="todo-time" value="" placeholder="请选择时间" readonly="" type="text">
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">处理描述:</span>
+                                <textarea name="result" id="result" placeholder="请输入处理描述"></textarea>
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">备注:</span>
+                                <textarea name="remark" id="remark" placeholder="请输入备注"></textarea>
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">文件:</span>
+                                <a href="javascript:;" class="papers d-ib">
+                                    <input type="file" id="f4">
+                                </a>
+                                <div class="deletelist-box ta-l">
+                                    <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                                    <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                                </div>
+                            </div>
+                            <div class="key fs-26rem ta-c">
+                                <a href="javascript:;" class="d-ib cancel">取消</a>
+                                <a href="javascript:;" class="d-ib start">确定</a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -163,7 +231,6 @@
 
 <div class="more-hint p-f d-n"></div>
 
-<script type="text/javascript" src="js/jquery.jedate.js"></script>
 <script src="js/select2_option.js"></script>
 <script>
     $('.more-right li').click(function(){
@@ -179,34 +246,36 @@
         $(".more").show();
         $(".timely-search .select2-container").css("margin","0 0.06rem 0 0")
     })
-    
-    //时间控件
-	$("#todo-time").jeDate({
-		isinitVal:false,
-		ishmsVal:false,
-		format:"YYYY-MM-DD hh:mm:ss",
-		zIndex:3000,
+    $(".editor").click(function(){
+        $(this).parent(".key").hide().next("form").show();
     })
-    //实现日期选择联动
-	var start = {
-		format: 'YYYY-MM-DD hh:mm:ss',
-		choosefun: function(elem,datas){
-			end.minDate = datas; //开始日选好后，重置结束日的最小日期
-			endDates();
-		}
-	};
-	var end = {
-		format: 'YYYY-MM-DD hh:mm:ss',
-		choosefun: function(elem,datas){
-			start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
-		}
-	};
-	function endDates() {
-		end.trigger = false;
-		$("#inpend").jeDate(end);
-	}
-	$("#inpstart").jeDate(start);
-	$("#inpend").jeDate(end);
+    $(".cancel,.start").click(function(){
+        $(this).closest("form").hide();
+        $(this).closest(".police-box").find(".key").show();
+    })
+
+
+    //时间控件
+    $(function () {
+        var currYear = (new Date()).getFullYear();	
+        var opt={};
+        opt.date = {preset : 'date'};
+        opt.datetime = {preset : 'datetime'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式 
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 50, //开始年份
+            endYear: currYear + 20 //结束年份
+        };
+        $("#inpstart,#inpend,#todo-time").mobiscroll($.extend(opt['date'], opt['default']));
+    });
+
 </script>
     
 

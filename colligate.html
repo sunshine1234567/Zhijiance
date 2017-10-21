@@ -1,63 +1,65 @@
 <!--综合分析-->
 <div class="colligate ta-c fs-30 c-f">
-    <div class="timely-search d-ib ta-l bg-f p-r">
-        <select class="js-select180 select-normal">
-            <option>一级区域</option>
-            <option>请选择</option>
-        </select>
-        <select class="js-select180 select-normal">
-            <option>二级区域</option>
-            <option>请选择</option>
-        </select>
-        <select class="js-select180 select-normal">
-            <option>企业</option>
-            <option>请选择</option>
-        </select>
-        <a href="javascript:;" class="more d-ib fs-26">更多</a>
-        <div class="more-box record-more d-n">
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                     <span>排放口：</span>
+    <form id="form-colligate" method="post" action="">
+        <div class="timely-search d-ib ta-l bg-f p-r">
+            <select class="js-select180 select-normal">
+                <option>一级区域</option>
+                <option>请选择</option>
+            </select>
+            <select class="js-select180 select-normal">
+                <option>二级区域</option>
+                <option>请选择</option>
+            </select>
+            <select class="js-select180 select-normal">
+                <option>企业</option>
+                <option>请选择</option>
+            </select>
+            <a href="javascript:;" class="more d-ib fs-26">更多</a>
+            <div class="more-box record-more d-n">
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>排放口：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <li class="d-ib ta-c active">1#废气排放口</li>
+                        <li class="d-ib ta-c">2#废气排放口</li>
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                     <li class="d-ib ta-c active">1#废气排放口</li>
-                     <li class="d-ib ta-c">2#废气排放口</li>
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                     <span>开始时间：</span>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>开始时间：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <input id="inpstart" name="time1" value="" placeholder="请选择" readonly="" type="text">
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <input id="inpstart" name="time1" value="" placeholder="请选择" readonly="" type="text">
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                     <span>结束时间：</span>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>结束时间：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <input id="inpend" name="time2" value="" placeholder="请选择" readonly="" type="text">
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <input id="inpend" name="time2" value="" placeholder="请选择" readonly="" type="text">
-                </ul>
-                <div class="c-b"></div>
+                <div class="more-type more-type2">
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <li class="d-ib ta-c active">全部</li>
+                        <li class="d-ib ta-c">在线</li>
+                        <li class="d-ib ta-c">离线</li>
+                        <li class="d-ib ta-c">离线</li>
+                    </ul>
+                    <div class="c-b"></div>
+                </div>
+                <div class="more-type">
+                    <a href="javascript:;" class="inquiry-a d-ib ta-c">查询</a>
+                </div>
             </div>
-            <div class="more-type more-type2">
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                     <li class="d-ib ta-c active">全部</li>
-                     <li class="d-ib ta-c">在线</li>
-                     <li class="d-ib ta-c">离线</li>
-                     <li class="d-ib ta-c">离线</li>
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <a href="javascript:;" class="inquiry-a d-ib ta-c">查询</a>
-            </div>
+            <div class="search-shrink p-a d-n"></div>
         </div>
-        <div class="search-shrink p-a d-n"></div>
-    </div>
+    </form>
 
     <div class="colligate-box"> 
         <ul class="ulf-l fs-24">
@@ -132,6 +134,27 @@
         $(".more").show();
         $(".timely-search .select2-container").css("margin","0 0.06rem 0 0")
     })
+    //时间控件
+    $(function () {
+        var currYear = (new Date()).getFullYear();	
+        var opt={};
+        opt.date = {preset : 'date'};
+        opt.datetime = {preset : 'datetime'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式 
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 50, //开始年份
+            endYear: currYear + 20 //结束年份
+        };
+        $("#inpstart,#inpend").mobiscroll($.extend(opt['date'], opt['default']));
+    });
+
 
 
 var chart = null;
@@ -141,6 +164,7 @@ $(function () {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
+            backgroundColor: '#FBFBFB',
         },
         colors:[
         '#74B3E9',//第一个颜色
@@ -181,6 +205,7 @@ $(function () {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
+            backgroundColor: '#FBFBFB',
         },
         colors:[
         '#74B3E9',//第一个颜色
@@ -221,6 +246,7 @@ $(function () {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
+            backgroundColor: '#FBFBFB',
         },
         colors:[
         '#74B3E9',//第一个颜色
@@ -261,6 +287,7 @@ $(function () {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
+            backgroundColor: '#FBFBFB',
         },
         colors:[
         '#74B3E9',//第一个颜色
@@ -301,6 +328,7 @@ $(function () {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
+            backgroundColor: '#FBFBFB',
         },
         colors:[
         '#74B3E9',//第一个颜色
@@ -341,6 +369,7 @@ $(function () {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
+            backgroundColor: '#FBFBFB',
         },
         colors:[
         '#74B3E9',//第一个颜色
@@ -381,6 +410,7 @@ $(function () {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
+            backgroundColor: '#FBFBFB',
         },
         colors:[
         '#74B3E9',//第一个颜色
@@ -421,6 +451,7 @@ $(function () {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
+            backgroundColor: '#FBFBFB',
         },
         colors:[
         '#74B3E9',//第一个颜色

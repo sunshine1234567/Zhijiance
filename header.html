@@ -63,11 +63,13 @@
             $(".sidebar").css({"width":"5.92rem"});
             $("#content").css({"left":"5.92rem"});
         }
+        stop()
     })
     $(".recall").click(function(){
         $(this).hide();
         $(".sidebar").css({"width":"0px"});
         $("#content").css({"left":"0px"});
+        move();
     })
 
     $(".count-shrink").click(function(){
@@ -97,6 +99,17 @@
         $(".search-a,.set-a,.count-box").hide();
         $(".nav-a,.fork-a").show();
         $(".search").css({"width":"0rem"});
+    }
+    /***禁止滑动***/
+    function stop(){
+        document.body.style.overflow='hidden';        
+        document.addEventListener("touchmove",mo,false);
+    }
+
+    /***取消滑动限制***/
+    function move(){
+        document.body.style.overflow='';
+        document.removeEventListener("touchmove",mo,false);        
     }
 </script>
 

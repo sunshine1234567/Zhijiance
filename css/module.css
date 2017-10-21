@@ -191,7 +191,7 @@
 .more-type .more-right li.li2{width:4.65rem;}
 .search-shrink{bottom: 0;left: 0;z-index:99;width: 100%;height:0.6rem;background:url(../img/icon11.png) no-repeat 3.6rem bottom;background-size:0.26rem 0.20rem;}
 .details-box{padding-left:0.68rem; white-space: nowrap;}
-.details-box h6{color: #225c98;margin:0 0 0.05rem 0;}
+.details-box p{color: #448ACA;margin:0 0 0.05rem 0;}
 .details-box ul li{width:3.12rem;height: 0.38rem;line-height:0.38rem;margin-right:0.2rem;margin-bottom:0.07rem;}
 .details-box ul li span{width: 1.44rem;}
 .details-box2 ul li{width: 100%;}
@@ -199,7 +199,7 @@
 .details-box2 ul li span.info-span2{width: 1.68rem;margin-right:0.3rem;}
 .details-box2 ul li span.active{background: #448ACA;color:#fff;text-indent: 0.12rem;border-radius: 0.05rem;margin-right:0.32rem}
 .details2-box{padding-left: 0.1rem;}
-.details2-box h6{padding-left: 0.56rem;}
+.details2-box p{padding-left: 0.56rem;}
 .graph{width: 100%;height: 1.8rem;}
 .graph-box{margin-bottom: 0.1rem;margin-left: 0.1rem;}
 .graph-box .graph-list{width:1.7rem;margin-left: 0.35rem;}
@@ -319,7 +319,7 @@ font-size: 100px;right: 0;top: 0;opacity: 0;}
 .colligate-box .colligate-li3.active p{color:#2F8BD9;background:url(../img/colligate7.png) no-repeat center 0.13rem;background-size:0.53rem auto;}
 .colligate-box .colligate-li4.active p{color:#A3D92F;background:url(../img/colligate8.png) no-repeat center 0.13rem;background-size:0.61rem auto;}
 
-.circle-box{width: 2.5rem; height: 2.5rem;}
+.circle-box{width: 2.45rem; height: 2.5rem;}
 .highcharts-credits{display: none;}
 .highcharts-title tspan{font-size: 0.21rem;color: #333;}
 .circle-box .container{width: 2.7rem; height: 2.7rem; margin: 0 auto}

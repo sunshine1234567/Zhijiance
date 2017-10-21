@@ -158,7 +158,7 @@ div.tablediv > .table-bordered {
 }
 .ui-jqgrid tr.jqgrow {  
 	outline-style: none;
-	background: #fff;
+	background: #FBFBFB;
 }
 .ui-jqgrid tr.jqgroup {  
 	outline-style: none; 

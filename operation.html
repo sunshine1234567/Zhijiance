@@ -1,71 +1,73 @@
 <!--运维管理-->
 <div class="timely ta-c fs-30 c-f">
-    <div class="timely-search d-ib ta-l bg-f p-r">
-        <select class="js-select180 select-normal">
-            <option>一级区域</option>
-            <option>请选择</option>
-        </select>
-        <select class="js-select180 select-normal">
-            <option>二级区域</option>
-            <option>请选择</option>
-        </select>
-        <select class="js-select180 select-normal">
-            <option>企业</option>
-            <option>请选择</option>
-        </select>
-        <a href="javascript:;" class="more d-ib fs-26">更多</a>
-        <div class="more-box d-n">
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                    <span>开始时间：</span>
+    <form id="form-todo1" method="post" action="">
+        <div class="timely-search d-ib ta-l bg-f p-r">
+            <select class="js-select180 select-normal">
+                <option>一级区域</option>
+                <option>请选择</option>
+            </select>
+            <select class="js-select180 select-normal">
+                <option>二级区域</option>
+                <option>请选择</option>
+            </select>
+            <select class="js-select180 select-normal">
+                <option>企业</option>
+                <option>请选择</option>
+            </select>
+            <a href="javascript:;" class="more d-ib fs-26">更多</a>
+            <div class="more-box d-n">
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>开始时间：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <input id="inpstart" name="time1" value="" placeholder="请选择" readonly="" type="text">
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <input id="inpstart" name="time1" value="" placeholder="请选择" readonly="" type="text">
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                    <span>结束时间：</span>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>结束时间：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <input id="inpend" name="time2" value="" placeholder="请选择" readonly="" type="text">
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <input id="inpend" name="time2" value="" placeholder="请选择" readonly="" type="text">
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                     <span>运维活动：</span>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>运维活动：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <li class="d-ib ta-c active">全部</li>
+                        <li class="d-ib ta-c">巡检</li>
+                        <li class="d-ib ta-c">维修</li>
+                        <li class="d-ib ta-c">配件更换</li>
+                        <li class="d-ib ta-c">校准</li>
+                        <li class="d-ib ta-c">比对/质控</li>
+                        <li class="d-ib ta-c">其他</li>
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                     <li class="d-ib ta-c active">全部</li>
-                     <li class="d-ib ta-c">巡检</li>
-                     <li class="d-ib ta-c">维修</li>
-                     <li class="d-ib ta-c">配件更换</li>
-                     <li class="d-ib ta-c">校准</li>
-                     <li class="d-ib ta-c">比对/质控</li>
-                     <li class="d-ib ta-c">其他</li>
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                     <span>排放口：</span>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>排放口：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <li class="d-ib ta-c active">全部</li>
+                        <li class="d-ib ta-c">1#废气排放口</li>
+                        <li class="d-ib ta-c">2#废气排放口</li>
+                        <li class="d-ib ta-c">废水排放口</li>
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <li class="d-ib ta-c active">全部</li>
-                    <li class="d-ib ta-c">1#废气排放口</li>
-                    <li class="d-ib ta-c">2#废气排放口</li>
-                    <li class="d-ib ta-c">废水排放口</li>
-                </ul>
-                <div class="c-b"></div>
+                <div class="key fs-26rem ta-c">
+                    <a href="javascript:;" class="d-ib start">查询</a>
+                </div>
             </div>
-            <div class="key fs-26rem ta-c">
-                <a href="javascript:;" class="d-ib start">查询</a>
-            </div>
+            <div class="search-shrink p-a d-n"></div>
         </div>
-        <div class="search-shrink p-a d-n"></div>
-    </div>
+    </form>
     <div class="situation-box ta-c">
         <div class="timely-details ta-l d-ib p-r">
             <div class="police">
@@ -126,78 +128,8 @@
     </div>
 </div>
 
-<div class="case-report fs-26 c-3 ta-c d-n">
-    <div class="report-list">
-        <span class="d-ib ">一级区域：</span>
-        <select class="js-select330 select-normal">
-            <option>北京市</option>
-            <option>请选择</option>
-        </select>
-    </div>
-    <div class="report-list">
-        <span class="d-ib ">二级区域：</span>
-        <select class="js-select330 select-normal">
-            <option>昌平区</option>
-            <option>请选择</option>
-        </select>
-    </div>
-    <div class="report-list">
-        <span class="d-ib ">企业：</span>
-        <select class="js-select330 select-normal">
-            <option>常山纺织厂</option>
-            <option>请选择</option>
-        </select>
-    </div>
-    <div class="report-list">
-        <span class="d-ib ">排放口：</span>
-        <select class="js-select330 select-normal">
-            <option>废水排放口</option>
-            <option>请选择</option>
-        </select>
-    </div>
-    <div class="report-list">
-        <span class="d-ib ">状态类别：</span>
-        <select class="js-select330 select-normal">
-            <option>企业停产</option>
-            <option>请选择</option>
-        </select>
-    </div>
-    <div class="report-list">
-        <span class="d-ib ">子状态类别：</span>
-        <select class="js-select330 select-normal">
-            <option>COD故障</option>
-            <option>请选择</option>
-        </select>
-    </div>
-    <div class="report-list">
-        <span class="d-ib ">开始时间：</span>
-        <input id="report-time1" name="time1" value="" placeholder="请选择" readonly="" type="text">
-    </div>
-    <div class="report-list">
-        <span class="d-ib ">计划结束时间：</span>
-        <input id="report-time2" name="time2" value="" placeholder="请选择" readonly="" type="text">
-    </div>
-    <div class="report-list">
-        <span class="d-ib ">计划完成时间：</span>
-        <input id="report-time3" name="time3" value="" placeholder="请选择" readonly="" type="text">
-    </div>
-    <div class="report-list">
-        <span class="d-ib ">状况详情：</span>
-        <textarea name="report" id="report">二级区域</textarea>
-    </div>
-    <div class="report-list">
-        <span class="d-ib ">文件：</span>
-        <a href="javascript:;" class="papers d-ib"></a>
-    </div>
-    <div class="key fs-26rem ta-c">
-        <a href="javascript:;" class="d-ib cancel">取消</a>
-        <a href="javascript:;" class="d-ib start">确定</a>
-    </div>
-</div>
-
 <div class="flnav p-f d-ib" onclick="switchs(18)"></div>
 
-<script type="text/javascript" src="js/jquery.jedate.js"></script>
 <script src="js/select2_option.js"></script>
 <script>
     $(".more").click(function(){
@@ -212,24 +144,25 @@
     })
     
     //时间控件
-	$("#report-time1").jeDate({
-		isinitVal:true,
-		ishmsVal:false,
-		format:"YYYY-MM-DD hh:mm:ss",
-		zIndex:3000,
-    })
-    $("#report-time2").jeDate({
-		isinitVal:true,
-		ishmsVal:false,
-		format:"YYYY-MM-DD hh:mm:ss",
-		zIndex:3000,
-    })
-    $("#report-time3").jeDate({
-		isinitVal:true,
-		ishmsVal:false,
-		format:"YYYY-MM-DD hh:mm:ss",
-		zIndex:3000,
-	})
+    $(function () {
+        var currYear = (new Date()).getFullYear();	
+        var opt={};
+        opt.date = {preset : 'date'};
+        opt.datetime = {preset : 'datetime'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式 
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 50, //开始年份
+            endYear: currYear + 20 //结束年份
+        };
+        $("#inpstart,#inpend").mobiscroll($.extend(opt['date'], opt['default']));
+    });
 </script>
     
 

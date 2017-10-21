@@ -57,7 +57,7 @@
 
 
     function switchs(nav) {
-        herder()
+        $(".recall").hide();
         switch (nav) {
             case 1:
                 $('#content-box').load('timely.html', function () {
@@ -155,6 +155,8 @@
                 });
                 break;
         }
+        herder()
+        move()
     }
 </script>
 

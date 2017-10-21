@@ -145,8 +145,6 @@
     </div>
 </div>
 
-
-<script type="text/javascript" src="js/jquery.jedate.js"></script>
 <script src="js/select2_option.js"></script>
 <script>
 $(function(){
@@ -254,8 +252,8 @@ $(function(){
         }
     });
 })
-</script>
-<script>
+
+
     $('.more-right li').click(function(){
     	$(this).addClass('active').siblings().removeClass('active');
     })
@@ -283,49 +281,29 @@ $(function(){
     $(".ratio").click(function(){
         $(".curve-img2").show();
     })
+    
+    //时间控件
+    $(function () {
+        var currYear = (new Date()).getFullYear();	
+        var opt={};
+        opt.date = {preset : 'date'};
+        opt.datetime = {preset : 'datetime'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式 
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 50, //开始年份
+            endYear: currYear + 20 //结束年份
+        };
+        $("#inpstart,#inpend,#inpstart1,#inpend1").mobiscroll($.extend(opt['date'], opt['default']));
+    });
 
 
-    //实现日期选择联动
-	var start = {
-		format: 'YYYY-MM-DD hh:mm:ss',
-		choosefun: function(elem,datas){
-			end.minDate = datas; //开始日选好后，重置结束日的最小日期
-			endDates();
-		}
-	};
-	var end = {
-		format: 'YYYY-MM-DD hh:mm:ss',
-		choosefun: function(elem,datas){
-			start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
-		}
-	};
-	function endDates() {
-		end.trigger = false;
-		$("#inpend").jeDate(end);
-	}
-	$("#inpstart").jeDate(start);
-	$("#inpend").jeDate(end);
-
-    //实现日期选择联动2
-	var start = {
-		format: 'YYYY-MM-DD hh:mm:ss',
-		choosefun: function(elem,datas){
-			end.minDate = datas; //开始日选好后，重置结束日的最小日期
-			endDates();
-		}
-	};
-	var end = {
-		format: 'YYYY-MM-DD hh:mm:ss',
-		choosefun: function(elem,datas){
-			start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
-		}
-	};
-	function endDates() {
-		end.trigger = false;
-		$("#inpend1").jeDate(end);
-	}
-	$("#inpstart1").jeDate(start);
-	$("#inpend1").jeDate(end);
 </script>
 
     

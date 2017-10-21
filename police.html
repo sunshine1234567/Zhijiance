@@ -1,81 +1,83 @@
 <!--报警管理-->
 <div class="timely ta-c fs-30 c-f">
-    <div class="timely-search d-ib ta-l bg-f p-r">
-        <select class="js-select180 select-normal">
-            <option>一级区域</option>
-            <option>请选择</option>
-        </select>
-        <select class="js-select180 select-normal">
-            <option>二级区域</option>
-            <option>请选择</option>
-        </select>
-        <select class="js-select180 select-normal">
-            <option>企业</option>
-            <option>请选择</option>
-        </select>
-        <a href="javascript:;" class="more d-ib fs-26">更多</a>
-        <div class="more-box d-n">
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                    <span>开始时间：</span>
+    <form id="form-police1" method="post" action="">
+        <div class="timely-search d-ib ta-l bg-f p-r">
+            <select class="js-select180 select-normal">
+                <option>一级区域</option>
+                <option>请选择</option>
+            </select>
+            <select class="js-select180 select-normal">
+                <option>二级区域</option>
+                <option>请选择</option>
+            </select>
+            <select class="js-select180 select-normal">
+                <option>企业</option>
+                <option>请选择</option>
+            </select>
+            <a href="javascript:;" class="more d-ib fs-26">更多</a>
+            <div class="more-box d-n">
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>开始时间：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <input id="inpstart" name="time1" value="" placeholder="请选择" readonly="" type="text">
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <input id="inpstart" name="time1" value="" placeholder="请选择" readonly="" type="text">
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                    <span>结束时间：</span>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>结束时间：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <input id="inpend" name="time2" value="" placeholder="请选择" readonly="" type="text">
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <input id="inpend" name="time2" value="" placeholder="请选择" readonly="" type="text">
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                     <span>报警类型：</span>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>报警类型：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <li class="d-ib ta-c active">全部</li>
+                        <li class="d-ib ta-c">排放口离线报警</li>
+                        <li class="d-ib ta-c">实时数据超标报警</li>
+                        <li class="d-ib ta-c">分钟数据超标报警</li>
+                        <li class="d-ib ta-c">小时数据超标报警</li>
+                        <li class="d-ib ta-c">日数据超标报警</li>
+                        <li class="d-ib ta-c">数据呆滞报警</li>
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                     <li class="d-ib ta-c active">全部</li>
-                     <li class="d-ib ta-c">排放口离线报警</li>
-                     <li class="d-ib ta-c">实时数据超标报警</li>
-                     <li class="d-ib ta-c">分钟数据超标报警</li>
-                     <li class="d-ib ta-c">小时数据超标报警</li>
-                     <li class="d-ib ta-c">日数据超标报警</li>
-                     <li class="d-ib ta-c">数据呆滞报警</li>
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                     <span>是否解除：</span>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>是否解除：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <li class="li3 d-ib ta-c active">全部</li>
+                        <li class="li3 d-ib ta-c">未解除</li>
+                        <li class="li3 d-ib ta-c">已解除</li>
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                     <li class="li3 d-ib ta-c active">全部</li>
-                     <li class="li3 d-ib ta-c">未解除</li>
-                     <li class="li3 d-ib ta-c">已解除</li>
-                </ul>
-                <div class="c-b"></div>
-            </div>
-            <div class="more-type">
-                <div class="more-left d-ib fs-24 c-6 ta-l f-l">
-                    <span>是否处理：</span>
+                <div class="more-type">
+                    <div class="more-left d-ib fs-24 c-6 ta-l f-l">
+                        <span>是否处理：</span>
+                    </div>
+                    <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
+                        <li class="li3 d-ib ta-c active">全部</li>
+                        <li class="li3 d-ib ta-c">未处理</li>
+                        <li class="li3 d-ib ta-c">已处理</li>
+                    </ul>
+                    <div class="c-b"></div>
                 </div>
-                <ul class="more-right d-ib fs-24 ta-l c-9 f-l">
-                    <li class="li3 d-ib ta-c active">全部</li>
-                    <li class="li3 d-ib ta-c">未处理</li>
-                    <li class="li3 d-ib ta-c">已处理</li>
-                </ul>
-                <div class="c-b"></div>
+                <div class="key fs-26rem ta-c">
+                    <a href="javascript:;" class="d-ib start">查询</a>
+                </div>
             </div>
-            <div class="key fs-26rem ta-c">
-                <a href="javascript:;" class="d-ib start">查询</a>
-            </div>
+            <div class="search-shrink p-a d-n"></div>
         </div>
-        <div class="search-shrink p-a d-n"></div>
-    </div>
+    </form>
     <div class="timely-box ta-c">
         <div class="timely-details ta-l d-ib p-r">
             <p class="details-p3 fs-28 c-3">
@@ -179,6 +181,32 @@
                     <div class="relieve1 key fs-26rem ta-c">
                         <a href="javascript:;" class="d-ib start">处理</a>
                     </div>
+                    <form id="form-police2" method="post" action="" class="d-n">
+                        <div class="relieve2">
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">处理结果：</span>
+                                <textarea name="result" id="result1" placeholder="请输入处理结果"></textarea>
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">备注：</span>
+                                <textarea name="remark" id="remark2" placeholder="请输入备注"></textarea>
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">文件:</span>
+                                <a href="javascript:;" class="papers d-ib">
+                                    <input type="file" id="f1">
+                                </a>
+                                <div class="deletelist-box ta-l">
+                                    <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                                    <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                                </div>
+                            </div>
+                            <div class="key fs-26rem ta-c">
+                                <a href="javascript:;" class="d-ib cancel">取消</a>
+                                <a href="javascript:;" class="d-ib parallel">开始对比</a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="police-box fs-26 c-9">
                     <p class="police-p1">
@@ -213,30 +241,35 @@
                     <p>总氮（065）数据超标报警</p>
                     <p>上限值：20，下限值：0，报警值：23.610</p>
                     <p>解除时间：--</p>
-                    <div class="relieve2">
-                        <div class="relieve2-list">
-                            <span class="d-ib ta-l">处理结果：</span>
-                            <textarea name="result" id="result">解除时间：2017-08-15  22:15:20</textarea>
-                        </div>
-                        <div class="relieve2-list">
-                            <span class="d-ib ta-l">备注：</span>
-                            <textarea name="remark" id="remark">解除时间：2017-08-15  22:15:20</textarea>
-                        </div>
-                        <div class="relieve2-list">
-                            <span class="d-ib ta-l">文件:</span>
-                            <a href="javascript:;" class="papers d-ib">
-                                <input type="file" id="f1">
-                            </a>
-                            <div class="deletelist-box ta-l">
-                                <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
-                                <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                    <div class="relieve1 key fs-26rem ta-c d-n">
+                        <a href="javascript:;" class="d-ib start">处理</a>
+                    </div>
+                    <form id="form-police2" method="post" action="">
+                        <div class="relieve2">
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">处理结果：</span>
+                                <textarea name="result" id="result1" placeholder="请输入处理结果"></textarea>
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">备注：</span>
+                                <textarea name="remark" id="remark2" placeholder="请输入备注"></textarea>
+                            </div>
+                            <div class="relieve2-list">
+                                <span class="d-ib ta-l">文件:</span>
+                                <a href="javascript:;" class="papers d-ib">
+                                    <input type="file" id="f1">
+                                </a>
+                                <div class="deletelist-box ta-l">
+                                    <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                                    <p>已经上传智监测 <a href="javascript:;" class="delete-list f-r">删除</a></p>
+                                </div>
+                            </div>
+                            <div class="key fs-26rem ta-c">
+                                <a href="javascript:;" class="d-ib cancel">取消</a>
+                                <a href="javascript:;" class="d-ib parallel">开始对比</a>
                             </div>
                         </div>
-                        <div class="key fs-26rem ta-c">
-                            <a href="javascript:;" class="d-ib cancel">取消</a>
-                            <a href="javascript:;" class="d-ib start">开始对比</a>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="police-box fs-26 c-9">
                     <div class="police-p1">
@@ -256,7 +289,6 @@
 
 <div class="more-hint p-f d-n"></div>
 
-<script type="text/javascript" src="js/jquery.jedate.js"></script>
 <script src="js/select2_option.js"></script>
 <script>
     $('.more-right li').click(function(){
@@ -277,43 +309,38 @@
         $(this).next(".police").toggle();
         $(this).find("i").toggleClass("i-active");
     })
-    $(".shift").click(function(){
-        if($(".timely-box").is(":hidden")){
-            $(".timely-box").show();
-            $(".map").hide();
-            $(this).text("切换列表模式");
-        }else{
-            $(".timely-box").hide();
-            $(".map").show();
-            $(this).text("切换地图模式");
-        }
-    })
     
     $(".delete-list").click(function(){
         $(this).parent("p").remove();
     })
 
-
-    //实现日期选择联动
-	var start = {
-		format: 'YYYY-MM-DD hh:mm:ss',
-		choosefun: function(elem,datas){
-			end.minDate = datas; //开始日选好后，重置结束日的最小日期
-			endDates();
-		}
-	};
-	var end = {
-		format: 'YYYY-MM-DD hh:mm:ss',
-		choosefun: function(elem,datas){
-			start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
-		}
-	};
-	function endDates() {
-		end.trigger = false;
-		$("#inpend").jeDate(end);
-	}
-	$("#inpstart").jeDate(start);
-	$("#inpend").jeDate(end);
+    $(".start").click(function(){
+        $(this).parent(".key").hide().next("form").show();
+    })
+    $(".cancel,.parallel").click(function(){
+        $(this).closest("form").hide();
+        $(this).closest(".police-box").find(".key").show();
+    })
+    //时间控件
+    $(function () {
+        var currYear = (new Date()).getFullYear();	
+        var opt={};
+        opt.date = {preset : 'date'};
+        opt.datetime = {preset : 'datetime'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式 
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 50, //开始年份
+            endYear: currYear + 20 //结束年份
+        };
+        $("#inpstart,#inpend").mobiscroll($.extend(opt['date'], opt['default']));
+    });
 </script>
     
 
