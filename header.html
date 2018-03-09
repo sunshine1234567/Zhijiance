@@ -47,6 +47,7 @@
         $(".set-box").fadeToggle();
     });
     $(".search-a").click(function(){
+        
         $(".count-box").toggle();
         var sidebar_width = $(".search").width();
         if(sidebar_width == 0){
@@ -57,6 +58,7 @@
 		}
     })
     $(".nav-a").click(function(){
+        $("body").height( $(window).height());
         $(".recall").show();
         var sidebar_w = $(".sidebar").width();
         if( sidebar_w == 0){
@@ -66,6 +68,7 @@
         stop()
     })
     $(".recall").click(function(){
+        $("body").height( $(document).height());
         $(this).hide();
         $(".sidebar").css({"width":"0px"});
         $("#content").css({"left":"0px"});
